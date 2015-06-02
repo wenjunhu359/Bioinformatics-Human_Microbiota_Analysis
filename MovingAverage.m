@@ -1,6 +1,4 @@
-load('Saliva_A');
-Saliva_A = david14otusmetadatasalivaA';
-
+load('dataset.m')
 Row_17 = Saliva_A(:,17);
 
 MA3 = conv(Row_17,[1/3,1/3,1/3]);
