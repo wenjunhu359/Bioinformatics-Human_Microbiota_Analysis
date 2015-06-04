@@ -1,5 +1,5 @@
 function output = normalize(input)
-%Normalize rows of a given table.
+%%Normalizing rows of given table.
 
 [row,column] = size(input);
 
@@ -14,4 +14,3 @@ for i = 1 : row
         end
     end
 end
-

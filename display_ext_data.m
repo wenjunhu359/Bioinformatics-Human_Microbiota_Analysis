@@ -1,8 +1,11 @@
 function display_ext_data(data,index)
+%%Display data with moving average(3-day, 5-day, 7-day)
 
 [d_r,d_c] = size(data);
 
 for i = 1:d_r
+    
+    % Calculate Moving Average 
     MA3 = conv(data(i,:),[1/3,1/3,1/3]);
     MA5 = conv(data(i,:),[1/5,1/5,1/5,1/5,1/5]);
     MA7 = conv(data(i,:),[1/7,1/7,1/7,1/7,1/7,1/7,1/7]);
