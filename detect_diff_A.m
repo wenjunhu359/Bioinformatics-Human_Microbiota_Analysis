@@ -1,5 +1,5 @@
 function output = detect_diff_A(input, threshold)
-%%Find OTU which shows large difference during travel period
+%%Finding OTU which shows large difference during traveling period
 
 [row, col] = size(input);
 
