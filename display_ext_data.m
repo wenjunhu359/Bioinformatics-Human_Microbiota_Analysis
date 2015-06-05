@@ -1,5 +1,5 @@
-function display_ext_data(data,index)
-%%Display data with moving average(3-day, 5-day, 7-day)
+function display_ext_data(data,index,category)
+%%Displaying data with moving average(3-day, 5-day, 7-day)
 
 [d_r,d_c] = size(data);
 
@@ -10,7 +10,7 @@ for i = 1:d_r
     MA5 = conv(data(i,:),[1/5,1/5,1/5,1/5,1/5]);
     MA7 = conv(data(i,:),[1/7,1/7,1/7,1/7,1/7,1/7,1/7]);
     
-    figure
+    figure('Name',category)
     plot(data(i,:));
     hold on
     plot(MA3,'r','LineWidth',2)
