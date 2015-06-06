@@ -6,7 +6,7 @@ threshold_SALIVA_A = 0.22;
 threshold_GUT_A = 0.20;
 threshold_GUT_B = 0.40;
 
-%% Cleaning Data
+%% Load Subject Data
 META_SALIVA_A = normalize(META_SALIVA_A_Array);
 [msa_row,msa_col] = size(META_SALIVA_A);
 META_STOOL_A = normalize(META_STOOL_A_Array);
@@ -24,16 +24,16 @@ diffs = detect_diff_A(msa_avail, threshold_SALIVA_A);
 diffs_index = find(diffs);
 diffs_data = msa_avail(diffs_index,:);
 diffs_index = msa_avail_index(diffs_index);
-display_ext_data(diffs_data,diffs_index,'SALIVA: A')
+display_MA(diffs_data,diffs_index,'SALIVA: A')
 
 diffsta = detect_diff_A(msta_avail, threshold_GUT_A);
 diffsta_index = find(diffsta);
 diffsta_data = msta_avail(diffsta_index,:);
 diffsta_index = msta_avail_index(diffsta_index);
-display_ext_data(diffsta_data,diffsta_index,'GUT: A')
+display_MA(diffsta_data,diffsta_index,'GUT: A')
 
 diffstb = detect_diff_B(mstb_avail, threshold_GUT_B);
 diffstb_index = find(diffstb);
 diffstb_data = mstb_avail(diffstb_index,:);
 diffstb_index = mstb_avail_index(diffstb_index);
-display_ext_data(diffstb_data,diffstb_index,'GUT: B')
+display_MA(diffstb_data,diffstb_index,'GUT: B')
