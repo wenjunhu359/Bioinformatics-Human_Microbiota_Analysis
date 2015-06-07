@@ -1,7 +1,7 @@
 # File Information 
 
-* `david-complete.biom`: Original File.
-* `david-stool-b.txt`: Nutrition.
+* `david-complete.biom`:
+* `david-stool-b.txt`:
 * `david14_otus_metadata_saliva_A.txt`: 
 * `otu.table.ggref`: 
 * `david-saliva-a.txt`: 
